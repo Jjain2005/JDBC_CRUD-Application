@@ -1,5 +1,22 @@
 Java JDBC CRUD Application Setup
 
+
+I built a User Management System that connects a Java application to a MySQL database using JDBC. The idea came from wanting to understand how real applications store and manage data not just print things to the console, but actually save them somewhere permanently.
+The project has two versions:
+
+Main.java - A console program that runs through all four CRUD operations step by step
+GUI.java - A graphical interface built using Java Swing where you can visually add, update, and delete users from a table
+
+
+Project Structure
+JDBC_CRUD-Application/
+├── Main.java                    # Console-based CRUD demo
+├── GUI.java                     # Swing GUI for user management
+├── mysql-connector-j-9.4.0.jar  # MySQL JDBC Driver
+├── .gitignore                   # Ignores compiled .class files
+└── README.md                    # This file
+
+
 This guide will help you set up the environment to run the Main.java application.
 1. Install MySQL Database
 
@@ -99,10 +116,33 @@ Compile it:
 
 Run it:
 
-        On Windows:
+        # macOS/Linux
+javac -cp ".:mysql-connector-j-9.4.0.jar" GUI.java
 
-        java -cp ".;mysql-connector-j-8.x.x.jar" Main.java
 
-        On macOS/Linux:
 
-        java -cp ".:mysql-connector-j-8.x.x.jar" Main.java
+             #windows
+javac -cp ".;mysql-connector-j-9.4.0.jar" GUI.java
+this app Does
+
+Creating two users
+Reading and printing all users
+Updating one user's details
+Deleting a user
+Printing the final list
+
+
+I Learned Building This
+
+How JDBC works and how Java talks to a database
+Writing SQL queries inside Java using PreparedStatements
+Why PreparedStatements are safer than plain SQL strings (prevents SQL injection)
+How to build a basic GUI using Java Swing
+Connecting a frontend form to a backend database
+
+
+
+
+GitHub Repository
+https://github.com/Jjain2005/JDBC_CRUD-Application
+
